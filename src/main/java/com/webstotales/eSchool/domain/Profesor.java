@@ -48,7 +48,7 @@ public class Profesor {
 		this.apellido = apellido;
 		this.fec_nac = fec_nac;
 	} 
-	
+	  
 	
 	  
 	
