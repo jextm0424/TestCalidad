@@ -3,9 +3,12 @@ package com.webstotales.eSchool.domain;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+@Entity
 @Table(name="t_profesor")
 public class Profesor {
 
@@ -48,8 +51,5 @@ public class Profesor {
 		this.apellido = apellido;
 		this.fec_nac = fec_nac;
 	} 
-	  
-	
-	  
-	
+
 }
