@@ -9,6 +9,9 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.webstotales.eSchool.comun.AjaxService;
+import com.webstotales.eSchool.comun.impl.AjaxServiceImpl;
+
 import java.util.Locale;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
@@ -57,4 +60,8 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(localeChangeInterceptor());
 	}	
+	@Bean
+	public AjaxService ajaxService(){
+		return new AjaxServiceImpl();
+	}
 }
