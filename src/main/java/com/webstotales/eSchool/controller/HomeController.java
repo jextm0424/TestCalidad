@@ -16,7 +16,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/")
 	public ModelAndView login(){
-		ModelAndView result = new ModelAndView("login");
+		ModelAndView result = new ModelAndView("index");
 		result.addObject("usuario", new Usuario());
 		return result;
 	}

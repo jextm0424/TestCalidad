@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Email;
@@ -54,10 +56,12 @@ public class Usuario {
 	@Column(name="url",nullable=false)
 	private String url;
 	
-	@Column(name="idRol", nullable=false)
+	@OneToOne
+	@JoinColumn(name="idRol", nullable=false)
 	private Rol idRol;
 	
-	@Column(name="idSeccion",nullable=false)
+	@OneToOne
+	@JoinColumn(name="idSeccion", nullable=false)
 	private Seccion idSeccion;
 
 	public int getIdUsuario() {

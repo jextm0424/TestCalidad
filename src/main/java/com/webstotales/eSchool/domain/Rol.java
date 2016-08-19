@@ -2,12 +2,14 @@ package com.webstotales.eSchool.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="t_rol")
 public class Rol {
-	@Column(name="idRol")
+	
+	@Id
 	private char id;
 	@Column(name="nombre")
 	private String nombre;
