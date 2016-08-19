@@ -31,4 +31,5 @@ public class ManageRolService {
 	public void delete(Character id){
 		rolrepository.delete(id);
 	}
+	
 }

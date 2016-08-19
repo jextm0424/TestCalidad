@@ -2,44 +2,57 @@ package com.webstotales.eSchool.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="t_rol")
-public class Rol {
-	@Column(name="idRol")
-	private char id;
+@Table(name="t_seccion")
+public class Seccion {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int idSeccion;
+	
 	@Column(name="nombre")
 	private String nombre;
+	
 	@Column(name="descripcion")
 	private String descripcion;
-	public char getId() {
-		return id;
+
+	public int getIdSeccion() {
+		return idSeccion;
 	}
-	public void setId(char id) {
-		this.id = id;
+
+	public void setIdSeccion(int idSeccion) {
+		this.idSeccion = idSeccion;
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 	public String getDescripcion() {
 		return descripcion;
 	}
+
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public Rol(char id, String nombre, String descripcion) {
+
+	public Seccion(int idSeccion, String nombre, String descripcion) {
 		super();
-		this.id = id;
+		this.idSeccion = idSeccion;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 	}
 	
-	public Rol() {
-		// TODO Auto-generated constructor stub
-	}
+	
+	
 	
 }
